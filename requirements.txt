@@ -1,0 +1,7 @@
+# Tested with Python 3.12 on CPU. JAX/optax pinned to the versions used for the paper.
+jax==0.11.0
+optax==0.2.8
+numpy>=2.0
+matplotlib>=3.8
+scipy>=1.12
+pillow>=10.0

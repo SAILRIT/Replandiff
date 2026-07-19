@@ -1,0 +1,18 @@
+\begin{tabular}{@{}lccccccc@{}}
+\toprule
+& \multicolumn{3}{c}{Task success $\uparrow$} & \multicolumn{3}{c}{Cost / errors at $n{=}1$ $\downarrow$} & Masker \\
+\cmidrule(lr){2-4}\cmidrule(lr){5-7}
+Agent & $n{=}0$ & $n{=}1$ & $n{=}2$ (novel) & Regen. & NFE & Invalid & P / R ($n{=}2$) \\
+\midrule
+Fixed plan (no repair) & $0.922${\,\scriptsize$\pm$\,0.044} & $0.000${\,\scriptsize$\pm$\,0.000} & $0.000${\,\scriptsize$\pm$\,0.000} & $0.0${\,\scriptsize$\pm$\,0.0} & $7${\,\scriptsize$\pm$\,0} & $2.02${\,\scriptsize$\pm$\,0.05} & -- \\
+Full replan & $0.963${\,\scriptsize$\pm$\,0.057} & $0.966${\,\scriptsize$\pm$\,0.067} & $0.764${\,\scriptsize$\pm$\,0.210} & $83.3${\,\scriptsize$\pm$\,0.3} & $33${\,\scriptsize$\pm$\,0} & $0.01${\,\scriptsize$\pm$\,0.02} & -- \\
+AR replan (suffix) & $0.989${\,\scriptsize$\pm$\,0.021} & $0.998${\,\scriptsize$\pm$\,0.004} & $0.754${\,\scriptsize$\pm$\,0.155} & $84.0${\,\scriptsize$\pm$\,0.0} & $108${\,\scriptsize$\pm$\,0} & $0.00${\,\scriptsize$\pm$\,0.01} & -- \\
+AR patch & $0.993${\,\scriptsize$\pm$\,0.015} & $1.000${\,\scriptsize$\pm$\,0.001} & $0.884${\,\scriptsize$\pm$\,0.211} & $2.0${\,\scriptsize$\pm$\,0.1} & $33${\,\scriptsize$\pm$\,0} & $0.00${\,\scriptsize$\pm$\,0.00} & $0.96$ / $0.64$ \\
+\textbf{Selective (conf.)} & $0.977${\,\scriptsize$\pm$\,0.045} & $0.974${\,\scriptsize$\pm$\,0.052} & $0.785${\,\scriptsize$\pm$\,0.239} & $1.9${\,\scriptsize$\pm$\,0.1} & $27${\,\scriptsize$\pm$\,4} & $0.00${\,\scriptsize$\pm$\,0.01} & $0.92$ / $0.90$ \\
+Selective (oracle) & $0.982${\,\scriptsize$\pm$\,0.036} & $0.977${\,\scriptsize$\pm$\,0.046} & $0.996${\,\scriptsize$\pm$\,0.006} & $1.9${\,\scriptsize$\pm$\,0.1} & $20${\,\scriptsize$\pm$\,4} & $0.00${\,\scriptsize$\pm$\,0.00} & -- \\
+\midrule
+\multicolumn{8}{@{}l}{\emph{Supervision-scarce condition (5 seeds): selective (conf.) agent, 425-step SFT}}\\
+\quad lite-SFT & $0.898${\,\scriptsize$\pm$\,0.056} & $0.838${\,\scriptsize$\pm$\,0.062} & $0.365${\,\scriptsize$\pm$\,0.230} & $1.8${\,\scriptsize$\pm$\,0.1} & $31${\,\scriptsize$\pm$\,3} & $0.20${\,\scriptsize$\pm$\,0.08} & -- \\
+\quad lite-SFT + RL & $0.932${\,\scriptsize$\pm$\,0.067} & $0.996${\,\scriptsize$\pm$\,0.003} & $0.401${\,\scriptsize$\pm$\,0.361} & $1.8${\,\scriptsize$\pm$\,0.1} & $27${\,\scriptsize$\pm$\,1} & $0.01${\,\scriptsize$\pm$\,0.01} & -- \\
+\bottomrule
+\end{tabular}

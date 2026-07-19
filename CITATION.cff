@@ -1,0 +1,8 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the accompanying paper."
+title: "Repair, Don't Replan: A Controlled Study of Observation-Conditioned Remasking in Masked-Diffusion Planners"
+authors:
+  - family-names: "<Your surname>"
+    given-names: "<Your given name>"
+year: 2026
+type: software
